@@ -89,6 +89,51 @@
 
           <h1 class="govuk-heading-l">Transactions</h1>
 
+          <div class="govuk-grid-row">
+
+            <div class="govuk-grid-column-one-quarter">
+              <div class="govuk-form-group">
+              <label class="govuk-label" for="email">
+                From date
+              </label>
+              <span class="govuk-hint">
+
+              </span>
+                <input class="govuk-input" type="text" name="birthday" value="10/24/1984">
+            </div>
+            </div>
+
+            <div class="govuk-grid-column-one-quarter">
+              <div class="govuk-form-group">
+              <label class="govuk-label" for="email">
+                To date
+              </label>
+              <span class="govuk-hint">
+
+              </span>
+                <input class="govuk-input" type="text" name="birthday" value="10/24/1984">
+            </div>
+            </div>
+
+            <div class="govuk-grid-column-one-half">
+              <form class="govuk-form-group">
+                <span id="nationality-hint" class="govuk-hint">
+                  Enter a case number or reference
+                </span>
+
+                <div>
+                  <div style="display: inline-block; width: 75%;">
+                    <input type="text" class="govuk-input" id="myInput" placeholder="" style="width: 100%;">
+                  </div>
+                  <div style="display: inline-block; width: 20%;">
+                    <button type="button" class="govuk-button" onclick="myFunction()" style="margin: 0; width: 100%;">Search</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+
+            </div>
+
           <table class="govuk-body govuk-!-font-size-16">
     <caption class="govuk-table__caption"></caption>
     <thead class="govuk-!-font-size-16">
@@ -105,17 +150,17 @@
     </thead>
     <tbody>
       <tr>
-        <td data-label="Payment reference"><a href="/dummy">RC-2352-6362-6257-7742<a/></td>
+        <td data-label="Payment reference"><a href="/RC-2352-6362-6257-7742">RC-2352-6362-6257-7742<a/></td>
         <td data-label="Case">DE0DE9F</td>
         <td data-label="Your reference">Divorce 7</td>
         <td data-label="Approver">James</td>
         <td data-label="Status">Pending</td>
-        <td data-label="Date">30 Jul 2018</td>
+        <td data-label="Date">02 Aug 2018</td>
         <td data-label="Amount">-£550.00</td>
       </tr>
 
       <tr>
-        <td data-label="Payment reference"><a href="/dummy">RC-9584-2521-7742-1457<a/></td>
+        <td data-label="Payment reference"><a href="/RC-9584-2521-7742-1457">RC-9584-2521-7742-1457<a/></td>
         <td data-label="Case">BR024GH</td>
         <td data-label="Your reference">Probate 33</td>
         <td data-label="Approver">Lucy</td>
@@ -194,6 +239,11 @@
 
       </div>
 
+      <br>
+      <br>
+      <br>
+        <a class="govuk-link govuk-!-font-size-14" href="/payment-overview">Alternate overview page</a>
+
 
 
 
@@ -218,4 +268,20 @@
 
 
 
+{% endblock %}
+{% block page_scripts %}
+<script>
+$(function() {
+  $('input[name="birthday"]').daterangepicker({
+    singleDatePicker: true,
+    showDropdowns: true,
+    minYear: 1901,
+    maxYear: parseInt(moment().format('YYYY'),10)
+  }, function(start, end, label) {
+    var years = moment().diff(start, 'years');
+    // alert("You are " + years + " years old!");
+  });
+
+});
+</script>
 {% endblock %}

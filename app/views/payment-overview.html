@@ -55,6 +55,10 @@
 
 
 
+
+
+
+
                 <!-- <h2 class="govuk-heading-l"><br>
                  £2746.00<br>
                  <span class="govuk-caption-m">Available to spend</span>
@@ -89,12 +93,52 @@
 
           <h1 class="govuk-heading-l">Transactions</h1>
 
+          <div class="govuk-grid-row">
 
-          <span> From date
-        <input type="text" name="birthday" value="10/24/1984"/ ></span>
+            <div class="govuk-grid-column-one-quarter">
+              <div class="govuk-form-group">
+              <label class="govuk-label" for="email">
+                From date
+              </label>
+              <span class="govuk-hint">
 
-        <span> To date
-      <input type="text" name="birthday" value="10/24/1984"/ ></span>
+              </span>
+                <input class="govuk-input" type="text" name="birthday" value="10/24/1984">
+            </div>
+            </div>
+
+            <div class="govuk-grid-column-one-quarter">
+              <div class="govuk-form-group">
+              <label class="govuk-label" for="email">
+                To date
+              </label>
+              <span class="govuk-hint">
+
+              </span>
+                <input class="govuk-input" type="text" name="birthday" value="10/24/1984">
+            </div>
+            </div>
+
+            <div class="govuk-grid-column-one-half">
+              <form class="govuk-form-group">
+                <span id="nationality-hint" class="govuk-hint">
+                  Enter a case number or reference
+                </span>
+
+                <div>
+                  <div style="display: inline-block; width: 75%;">
+                    <input type="text" class="govuk-input" id="myInput" placeholder="" style="width: 100%;">
+                  </div>
+                  <div style="display: inline-block; width: 20%;">
+                    <button type="button" class="govuk-button" onclick="myFunction()" style="margin: 0; width: 100%;">Search</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+
+            </div>
+
+
 
 
 
@@ -119,7 +163,7 @@
         <td data-label="Your reference">Divorce 7</td>
         <td data-label="Approver">James</td>
         <td data-label="Status">Pending</td>
-        <td data-label="Date">30 Jul 2018</td>
+        <td data-label="Date">02 Aug 2018</td>
         <td data-label="Amount">-£550.00</td>
       </tr>
 
@@ -202,6 +246,10 @@
         </div>
 
       </div>
+      <br>
+      <br>
+      <br>
+        <a class="govuk-link govuk-!-font-size-14" href="/payment-overview2">Alternate overview page</a>
 
 
 
