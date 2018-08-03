@@ -44,12 +44,16 @@
 
                 <ul class="govuk-list">
                 <li>
-                  <!-- <a class="govuk-link" href="/dummy">View statement</a> -->
+                  <!-- <a class="govuk-link" href="/statements">View statement</a> -->
                 </li>
                 <li>
                   <a class="govuk-link" href="/dummy">Add an account</a>
                 </li>
               </ul>
+
+
+
+
 
 
 
@@ -91,52 +95,60 @@
 
           <div class="govuk-grid-row">
 
-            <div class="govuk-grid-column-one-quarter">
+            <div class="govuk-grid-column-one-third">
               <div class="govuk-form-group">
-              <label class="govuk-label" for="email">
-                From date
-              </label>
-              <span class="govuk-hint">
-
-              </span>
-                <input class="govuk-input" type="text" name="birthday" value="10/24/1984">
+                <label class="govuk-label" for="email">
+                  Date range
+                </label>
+              <div class="govuk-input" id="reportrange" style="background: #fff; font-size: 18px; cursor: pointer; padding: 8px 10px; border: 2px solid #000; width: 100%">
+                <i class="hod-calendar"></i>&nbsp;
+                <span></span>
+                 <i class="fa fa-caret-down"></i>
             </div>
-            </div>
-
-            <div class="govuk-grid-column-one-quarter">
-              <div class="govuk-form-group">
-              <label class="govuk-label" for="email">
-                To date
-              </label>
-              <span class="govuk-hint">
-
-              </span>
-                <input class="govuk-input" type="text" name="birthday" value="10/24/1984">
             </div>
             </div>
 
-            <div class="govuk-grid-column-one-half">
+
+
+            <div class="govuk-grid-column-two-thirds">
               <form class="govuk-form-group">
-                <span id="nationality-hint" class="govuk-hint">
-                  Enter a case number or reference
-                </span>
+                <label class="govuk-label" for="email">
+                  Search
+                </label>
 
-                <div>
-                  <div style="display: inline-block; width: 75%;">
-                    <input type="text" class="govuk-input" id="myInput" placeholder="" style="width: 100%;">
+                  <div style="float: left; margin-right: 1%; width: 80%;">
+                    <input type="text" class="govuk-input" id="myInput" placeholder="Enter a case number or reference" style="width: 100%;">
                   </div>
-                  <div style="display: inline-block; width: 20%;">
+                  <div style="float: left; width: 19%;">
                     <button type="button" class="govuk-button" onclick="myFunction()" style="margin: 0; width: 100%;">Search</button>
                   </div>
-                </div>
+
+
+                  <!-- <form class="example" action="action_page.php">
+                    <input class="govuk-input" type="text" placeholder="Enter a case number or reference" name="search">
+                    <button type="submit"><i class="fa fa-search"></i></button>
+                  </form> -->
+
+
+
               </form>
             </div>
 
+
+
             </div>
 
-          <table class="govuk-body govuk-!-font-size-16">
-    <caption class="govuk-table__caption"></caption>
-    <thead class="govuk-!-font-size-16">
+
+
+
+
+
+
+
+
+          <table class="govuk-body govuk-!-font-size-16" id="transactionstable">
+          <p class="govuk-body govuk-!-font-size-16">  <!-- 7 payments --> </p>
+          <thead class="govuk-!-font-size-16">
       <tr class="govuk-table__row">
         <th class="govuk-table__header" scope="col">Payment reference</th>
         <th class="govuk-table__header" scope="col">Case</th>
@@ -155,7 +167,7 @@
         <td data-label="Your reference">Divorce 7</td>
         <td data-label="Approver">James</td>
         <td data-label="Status">Pending</td>
-        <td data-label="Date">02 Aug 2018</td>
+        <td id="pendingPayment" data-label="Date">02 Aug 2018</td>
         <td data-label="Amount">-£550.00</td>
       </tr>
 
@@ -235,14 +247,19 @@
     </tbody>
   </table>
 
+
+
+
+
         </div>
 
       </div>
+      <br>
+      <br>
+      <br>
+        <a class="govuk-link govuk-!-font-size-14" href="/payment-overview2">Alternate overview page</a>
 
-      <br>
-      <br>
-      <br>
-        <a class="govuk-link govuk-!-font-size-14" href="/payment-overview">Alternate overview page</a>
+
 
 
 
@@ -270,7 +287,9 @@
 
 {% endblock %}
 {% block page_scripts %}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
 <script>
+
 $(function() {
   $('input[name="birthday"]').daterangepicker({
     singleDatePicker: true,
@@ -283,5 +302,65 @@ $(function() {
   });
 
 });
+
+$(function() {
+
+    var start = moment().subtract(29, 'days');
+    var end = moment();
+
+    function cb(start, end) {
+        $('#reportrange span').html(start.format('DD MMM YYYY') + ' - ' + end.format('DD MMM YYYY'));
+    }
+
+    $('#reportrange').daterangepicker({
+        startDate: start,
+        endDate: end,
+        ranges: {
+          'Next 7 Days': [moment().add(6, 'days'), moment().add(1, 'days')],
+          'Tomorrow': [moment().add(1, 'days'), moment().add(1, 'days')],
+           'Today': [moment(), moment()],
+           'Yesterday': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
+           'Last 7 Days': [moment().subtract(6, 'days'), moment()],
+           'Last 30 Days': [moment().subtract(29, 'days'), moment()],
+           'This Month': [moment().startOf('month'), moment().endOf('month')],
+           'Last Month': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
+        }
+    }, cb);
+
+    cb(start, end);
+
+});
+
+function myFunction() {
+  // Declare variables
+  var input, filter, table, tr, td, i;
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+  table = document.getElementById("transactionstable");
+  tr = table.getElementsByTagName("tr");
+
+  // Loop through all table rows, and hide those who don't match the search query
+  for (i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("td")[2];
+    if (td) {
+      if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
+    }
+  }
+}
+  pendingPayment();
+
+  function pendingPayment() {
+    var dateField = document.getElementById('pendingPayment');
+    dateField.innerHTML = moment().format('DD MMM YYYY');
+  }
+
+
+
 </script>
+
+
 {% endblock %}
