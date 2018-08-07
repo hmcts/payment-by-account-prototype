@@ -28,7 +28,8 @@
                      <br>Credit  limit
                      <br>
                      <br>
-                   <p class="govuk-body govuk-!-font-size-36 govuk-!-font-weight-bold">£2746.00<span class="govuk-caption-m">Available to spend</span></p>
+                   <p class="govuk-body govuk-!-font-size-36 govuk-!-font-weight-bold">£2746.00<span class="govuk-caption-m">Available to spend <div id="balanceYesterday"> </div></span></p>
+
                 </h2>
 
 
@@ -167,7 +168,7 @@
         <td data-label="Your reference">Divorce 7</td>
         <td data-label="Approver">James</td>
         <td data-label="Status">Pending</td>
-        <td id="pendingPayment" data-label="Date">02 Aug 2018</td>
+        <td id="pendingPayment" data-label="Date"></td>
         <td data-label="Amount">-£550.00</td>
       </tr>
 
@@ -177,7 +178,7 @@
         <td data-label="Your reference">Probate 33</td>
         <td data-label="Approver">Lucy</td>
         <td data-label="Status">Completed</td>
-        <td data-label="Date">29 Jul 2018</td>
+        <td id="1457Date" data-label="Date"></td>
         <td data-label="Amount">-£215.00</td>
       </tr>
 
@@ -187,7 +188,7 @@
         <td data-label="Your reference">Divorce 6</td>
         <td data-label="Approver">Joe</td>
         <td data-label="Status">Completed</td>
-        <td data-label="Date">27 Jul 2018</td>
+        <td id="1515Date" data-label="Date"></td>
         <td data-label="Amount">-£550.00</td>
       </tr>
 
@@ -197,17 +198,17 @@
         <td data-label="Your reference">-</td>
         <td data-label="Approver">-</td>
         <td data-label="Status">Completed</td>
-        <td data-label="Date">26 Jul 2018</td>
+        <td id="directDebitDate" data-label="Date"></td>
         <td data-label="Amount">+£2590.40</td>
       </tr>
 
       <tr>
-        <td data-label="Payment reference"><a href="/dummy">RC-6124-1415-7215-1515<a/></td>
+        <td data-label="Payment reference"><a href="/dummy">RC-64220-7212-7321-8721<a/></td>
         <td data-label="Case">DE024JD</td>
         <td data-label="Your reference">Probate 32</td>
         <td data-label="Approver">Joe</td>
         <td data-label="Status">Completed</td>
-        <td data-label="Date">25 Jul 2018</td>
+        <td id="8721Date" data-label="Date"></td>
         <td data-label="Amount">-£215.00</td>
       </tr>
 
@@ -217,7 +218,7 @@
         <td data-label="Your reference">Probate 31</td>
         <td data-label="Approver">James</td>
         <td data-label="Status">Completed</td>
-        <td data-label="Date">24 Jul 2018</td>
+        <td id="1678Date" data-label="Date"></td>
         <td data-label="Amount">-£215.00</td>
       </tr>
 
@@ -227,7 +228,7 @@
         <td data-label="Your reference">Probate 30</td>
         <td data-label="Approver">James</td>
         <td data-label="Status">Completed</td>
-        <td data-label="Date">24 Jul 2018</td>
+        <td id="7832Date" data-label="Date"></td>
         <td data-label="Amount">-£215.00</td>
       </tr>
 
@@ -237,7 +238,7 @@
         <td data-label="Your reference">Divorce 5</td>
         <td data-label="Approver">Lucy</td>
         <td data-label="Status">Completed</td>
-        <td data-label="Date">23 Jul 2018</td>
+        <td id="8363Date" data-label="Date"></td>
         <td data-label="Amount">-£550.00</td>
       </tr>
 
@@ -351,11 +352,40 @@ function myFunction() {
     }
   }
 }
-  pendingPayment();
 
-  function pendingPayment() {
+  balanceYesterday();
+
+  function balanceYesterday() {
+    var dateField = document.getElementById('balanceYesterday');
+    dateField.innerHTML = moment().subtract(1, 'days').format ('[As of ]DD MMM YYYY');
+  }
+
+  paymentReferenceDates();
+
+  function paymentReferenceDates() {
     var dateField = document.getElementById('pendingPayment');
     dateField.innerHTML = moment().format('DD MMM YYYY');
+
+    var dateField = document.getElementById('1457Date');
+    dateField.innerHTML = moment().subtract(1, 'days').format ('DD MMM YYYY');
+
+    var dateField = document.getElementById('1515Date');
+    dateField.innerHTML = moment().subtract(2, 'days').format ('DD MMM YYYY');
+
+    var dateField = document.getElementById('8721Date');
+    dateField.innerHTML = moment().subtract(3, 'days').format ('DD MMM YYYY');
+
+    var dateField = document.getElementById('directDebitDate');
+    dateField.innerHTML = moment().subtract(3, 'days').format ('DD MMM YYYY');
+
+    var dateField = document.getElementById('1678Date');
+    dateField.innerHTML = moment().subtract(4, 'days').format ('DD MMM YYYY');
+
+    var dateField = document.getElementById('7832Date');
+    dateField.innerHTML = moment().subtract(4, 'days').format ('DD MMM YYYY');
+
+    var dateField = document.getElementById('8363Date');
+    dateField.innerHTML = moment().subtract(5, 'days').format ('DD MMM YYYY');
   }
 
 

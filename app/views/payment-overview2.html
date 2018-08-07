@@ -33,7 +33,7 @@
 
 
                 <h3 class="govuk-heading-l govuk-!-font-weight-regular"><a class="govuk-link govuk-!-font-size-19" href="/statements">Statement summary</a><br>
-                  <p class="govuk-body govuk-!-font-size-19 govuk-!-font-weight-bold">£17,254.00<span class="govuk-caption-m">Next payment due <br>4 Aug 2018</span></p>
+                  <p class="govuk-body govuk-!-font-size-19 govuk-!-font-weight-bold">£17,254.00<span class="govuk-caption-m">Next payment due<div class="govuk-body govuk-!-font-size-19" id="nextPaymentDue">4 Aug 2018</div></span></p>
                   <button type="submit" class="govuk-button">
                   Make payment
                 </button>
@@ -167,7 +167,7 @@
         <td data-label="Your reference">Divorce 7</td>
         <td data-label="Approver">James</td>
         <td data-label="Status">Pending</td>
-        <td id="pendingPayment" data-label="Date">02 Aug 2018</td>
+        <td id="pendingPayment" data-label="Date"></td>
         <td data-label="Amount">-£550.00</td>
       </tr>
 
@@ -257,7 +257,7 @@
       <br>
       <br>
       <br>
-        <a class="govuk-link govuk-!-font-size-14" href="/payment-overview2">Alternate overview page</a>
+        <a class="govuk-link govuk-!-font-size-14" href="/payment-overview">Alternate overview page</a>
 
 
 
@@ -356,6 +356,13 @@ function myFunction() {
   function pendingPayment() {
     var dateField = document.getElementById('pendingPayment');
     dateField.innerHTML = moment().format('DD MMM YYYY');
+  }
+
+  nextPaymentDue();
+
+  function nextPaymentDue() {
+    var dateField = document.getElementById('nextPaymentDue');
+    dateField.innerHTML = moment().add(1, 'months').format ('01 MMM YYYY');
   }
 
 

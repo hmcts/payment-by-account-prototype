@@ -64,7 +64,7 @@
               <dt class="govuk-check-your-answers__question">
                 Next payment due
               </dt>
-              <dd class="govuk-check-your-answers__answer">
+              <dd class="govuk-check-your-answers__answer" id="pendingPayment">
                 1 Aug 2018
               </dd>
               <dd class="govuk-check-your-answers__change">
@@ -99,7 +99,7 @@
 
           <dl class="govuk-check-your-answers govuk-check-your-answers--short">
             <div class="govuk-check-your-answers__contents">
-              <dt class="govuk-check-your-answers__question">
+              <dt class="govuk-check-your-answers__question" id="pendingStatement1">
                 July 2018
               </dt>
               <dd class="govuk-check-your-answers__answer">
@@ -112,7 +112,7 @@
               </dd>
             </div>
             <div class="govuk-check-your-answers__contents">
-              <dt class="govuk-check-your-answers__question">
+              <dt class="govuk-check-your-answers__question" id="pendingStatement2">
                 June 2018
               </dt>
               <dd class="govuk-check-your-answers__answer">
@@ -125,7 +125,7 @@
               </dd>
             </div>
             <div class="govuk-check-your-answers__contents">
-              <dt class="govuk-check-your-answers__question">
+              <dt class="govuk-check-your-answers__question" id="pendingStatement3">
                 May 2018
               </dt>
               <dd class="govuk-check-your-answers__answer">
@@ -138,7 +138,7 @@
               </dd>
             </div>
             <div class="govuk-check-your-answers__contents">
-              <dt class="govuk-check-your-answers__question">
+              <dt class="govuk-check-your-answers__question" id="pendingStatement4">
                 April 2018
               </dt>
               <dd class="govuk-check-your-answers__answer">
@@ -151,7 +151,7 @@
               </dd>
             </div>
             <div class="govuk-check-your-answers__contents">
-              <dt class="govuk-check-your-answers__question">
+              <dt class="govuk-check-your-answers__question" id="pendingStatement5">
                 March 2018
               </dt>
               <dd class="govuk-check-your-answers__answer">
@@ -164,7 +164,7 @@
               </dd>
             </div>
             <div class="govuk-check-your-answers__contents">
-              <dt class="govuk-check-your-answers__question">
+              <dt class="govuk-check-your-answers__question" id="pendingStatement6">
                 Febuary 2018
               </dt>
               <dd class="govuk-check-your-answers__answer">
@@ -177,7 +177,7 @@
               </dd>
             </div>
             <div class="govuk-check-your-answers__contents">
-              <dt class="govuk-check-your-answers__question">
+              <dt class="govuk-check-your-answers__question" id="pendingStatement7">
                 January 2018
               </dt>
               <dd class="govuk-check-your-answers__answer">
@@ -190,7 +190,7 @@
               </dd>
             </div>
             <div class="govuk-check-your-answers__contents">
-              <dt class="govuk-check-your-answers__question">
+              <dt class="govuk-check-your-answers__question" id="pendingStatement8">
                 December 2017
               </dt>
               <dd class="govuk-check-your-answers__answer">
@@ -203,7 +203,7 @@
               </dd>
             </div>
             <div class="govuk-check-your-answers__contents">
-              <dt class="govuk-check-your-answers__question">
+              <dt class="govuk-check-your-answers__question" id="pendingStatement9">
                 November 2017
               </dt>
               <dd class="govuk-check-your-answers__answer">
@@ -216,7 +216,7 @@
               </dd>
             </div>
             <div class="govuk-check-your-answers__contents">
-              <dt class="govuk-check-your-answers__question">
+              <dt class="govuk-check-your-answers__question" id="pendingStatement10">
                 October 2017
               </dt>
               <dd class="govuk-check-your-answers__answer">
@@ -229,7 +229,7 @@
               </dd>
             </div>
             <div class="govuk-check-your-answers__contents">
-              <dt class="govuk-check-your-answers__question">
+              <dt class="govuk-check-your-answers__question" id="pendingStatement11">
                 September 2017
               </dt>
               <dd class="govuk-check-your-answers__answer">
@@ -242,7 +242,7 @@
               </dd>
             </div>
             <div class="govuk-check-your-answers__contents">
-              <dt class="govuk-check-your-answers__question">
+              <dt class="govuk-check-your-answers__question" id="pendingStatement12">
                 August 2017
               </dt>
               <dd class="govuk-check-your-answers__answer">
@@ -291,5 +291,69 @@
   </div>
 
 
+
+{% endblock %}
+{% block page_scripts %}
+
+<script>
+
+pendingPayment();
+
+function pendingPayment() {
+  var dateField = document.getElementById('pendingPayment');
+  dateField.innerHTML = moment().add(1, 'months').format ('01 MMM YYYY');
+}
+
+
+pendingStatement();
+
+function pendingStatement() {
+  var dateField = document.getElementById('pendingStatement1');
+  dateField.innerHTML = moment().add(12, 'months').format ('02 MMMM YYYY');
+
+  var dateField = document.getElementById('pendingStatement2');
+  dateField.innerHTML = moment().add(11, 'months').format ('02 MMMM YYYY');
+
+  var dateField = document.getElementById('pendingStatement3');
+  dateField.innerHTML = moment().add(10, 'months').format ('02 MMMM YYYY');
+
+  var dateField = document.getElementById('pendingStatement4');
+  dateField.innerHTML = moment().add(9, 'months').format ('02 MMMM YYYY');
+
+  var dateField = document.getElementById('pendingStatement5');
+  dateField.innerHTML = moment().add(8, 'months').format ('02 MMMM YYYY');
+
+  var dateField = document.getElementById('pendingStatement6');
+  dateField.innerHTML = moment().add(7, 'months').format ('02 MMMM YYYY');
+
+  var dateField = document.getElementById('pendingStatement7');
+  dateField.innerHTML = moment().add(6, 'months').format ('02 MMMM YYYY');
+
+  var dateField = document.getElementById('pendingStatement8');
+  dateField.innerHTML = moment().add(5, 'months').format ('02 MMMM YYYY');
+
+  var dateField = document.getElementById('pendingStatement9');
+  dateField.innerHTML = moment().add(4, 'months').format ('02 MMMM YYYY');
+
+  var dateField = document.getElementById('pendingStatement10');
+  dateField.innerHTML = moment().add(3, 'months').format ('02 MMMM YYYY');
+
+  var dateField = document.getElementById('pendingStatement11');
+  dateField.innerHTML = moment().add(2, 'months').format ('02 MMMM YYYY');
+
+  var dateField = document.getElementById('pendingStatement12');
+  dateField.innerHTML = moment().add(1, 'months').format ('02 MMMM YYYY');
+}
+
+
+
+balanceYesterday();
+
+function balanceYesterday() {
+  var dateField = document.getElementById('balanceYesterday');
+  dateField.innerHTML = moment().subtract(1, 'days').format ('DD MMM YYYY');
+}
+
+</script>
 
 {% endblock %}
