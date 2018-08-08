@@ -14,12 +14,21 @@ $govuk-global-styles: true;
 // JUI styles
 @import "jui/all";
 
+.govuk-grid-column-payment-one-quarter {
+  float: left;
+  width: 100%;
+
+  @media screen and (min-width: 650px) {
+    width: 20%;
+  }
+}
+
 .govuk-grid-column-three-quarters {
   float: left;
   width: 100%;
 
   @media screen and (min-width: 650px) {
-    width: 75%;
+    width: 80%;
   }
 }
 
