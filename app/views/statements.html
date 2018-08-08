@@ -29,66 +29,6 @@
 
         <div class="govuk-grid-column-one-half">
 
-
-
-
-
-
-          <h2 class="govuk-heading-m">
-            Summary
-          </h2>
-
-          <dl class="govuk-check-your-answers govuk-check-your-answers--short">
-            <div class="govuk-check-your-answers__contents">
-              <dt class="govuk-check-your-answers__question">
-                Account number
-              </dt>
-              <dd class="govuk-check-your-answers__answer">
-                PBA0241463
-              </dd>
-              <dd class="govuk-check-your-answers__change">
-              </dd>
-            </div>
-            <div class="govuk-check-your-answers__contents">
-              <dt class="govuk-check-your-answers__question">
-                Outstanding balance
-              </dt>
-              <dd class="govuk-check-your-answers__answer">
-                £17,254.00
-              </dd>
-              <dd class="govuk-check-your-answers__change">
-              </dd>
-            </div>
-
-            <div class="govuk-check-your-answers__contents">
-              <dt class="govuk-check-your-answers__question">
-                Next payment due
-              </dt>
-              <dd class="govuk-check-your-answers__answer" id="pendingPayment">
-                1 Aug 2018
-              </dd>
-              <dd class="govuk-check-your-answers__change">
-                <a href="#">
-                  <span class="visually-hidden"></span>
-                </a>
-              </dd>
-            </div>
-          </dl>
-
-          <button type="submit" class="govuk-button">
-            Make payment
-          </button>
-
-
-        </div>
-        <br>
-        <div class="govuk-grid-column-one-half">
-
-
-          <h2 class="govuk-heading-m">
-            Previous statements
-          </h2>
-
           <div class="govuk-warning-text">
             <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
             <strong class="govuk-warning-text__text">
@@ -259,7 +199,12 @@
           </dl>
 
 
+        </div>
+        <br>
+        <div class="govuk-grid-column-one-half">
 
+
+        
 
 
 
@@ -297,12 +242,6 @@
 
 <script>
 
-pendingPayment();
-
-function pendingPayment() {
-  var dateField = document.getElementById('pendingPayment');
-  dateField.innerHTML = moment().add(1, 'months').format ('01 MMM YYYY');
-}
 
 
 pendingStatement();
@@ -347,12 +286,7 @@ function pendingStatement() {
 
 
 
-balanceYesterday();
 
-function balanceYesterday() {
-  var dateField = document.getElementById('balanceYesterday');
-  dateField.innerHTML = moment().subtract(1, 'days').format ('DD MMM YYYY');
-}
 
 </script>
 

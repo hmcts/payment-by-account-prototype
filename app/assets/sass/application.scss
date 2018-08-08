@@ -16,10 +16,15 @@ $govuk-global-styles: true;
 
 .govuk-grid-column-payment-one-quarter {
   float: left;
+  padding-left: 15px;
   width: 100%;
 
+
+
   @media screen and (min-width: 650px) {
-    width: 20%;
+    width: 18%;
+    // margin-right: -15;
+    padding-left: 15px;
   }
 }
 
