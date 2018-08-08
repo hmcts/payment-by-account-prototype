@@ -19,7 +19,7 @@
       </div>
 
               <div class="govuk-grid-row">
-                <div class="govuk-grid-column-one-quarter">
+                <div class="govuk-grid-column-payment-one-quarter">
 
                   <h2 class="govuk-heading-l">Account</h2>
 
@@ -28,7 +28,7 @@
                      <br>Credit  limit
                      <br>
                      <br>
-                   <p class="govuk-body govuk-!-font-size-36 govuk-!-font-weight-bold">£2746.00<span class="govuk-caption-m">Available to spend <div id="balanceYesterday"> </div></span></p>
+                   <p class="govuk-body govuk-!-font-size-36 govuk-!-font-weight-bold">£2746.00 <span class="govuk-caption-m">Available to spend<br>As of<span id="balanceYesterday"></span></span></p>
 
                 </h3>
 
@@ -41,9 +41,9 @@
               </h3> -->
 
 
+                <br>
 
-
-                <ul class="govuk-list">
+                <ul class="govuk-list govuk-!-font-size-24">
                 <li>
                   <a class="govuk-link" href="/statements">View statement</a>
                 </li>
@@ -133,24 +133,24 @@
                     <button type="submit"><i class="fa fa-search"></i></button>
                   </form> -->
 
-
-
               </form>
             </div>
 
 
 
+
             </div>
 
 
+              <div class="govuk-grid-row">
+                <div class="govuk-grid-column-full">
+
+            <a class="govuk-link" href="/dummy">Download current transactions</a>
 
 
 
 
-
-
-
-          <table class="govuk-body govuk-!-font-size-16" id="transactionstable">
+          <table class="govuk-body govuk-!-font-size-14" id="transactionstable">
           <p class="govuk-body govuk-!-font-size-16">  <!-- 7 payments --> </p>
           <thead class="govuk-!-font-size-16">
       <tr class="govuk-table__row">
@@ -159,7 +159,7 @@
         <th class="govuk-table__header" scope="col">Reference</th>
         <th class="govuk-table__header" scope="col">Approver</th>
         <th class="govuk-table__header" scope="col">Status</th>
-        <th class="govuk-table__header" scope="col">Date</th>
+        <th class="govuk-table__header" scope="col">Date created</th>
         <th class="govuk-table__header" scope="col">Amount</th>
 
       </tr>
@@ -167,8 +167,8 @@
     <tbody>
       <tr>
         <td data-label="Payment reference"><a href="/RC-2352-6362-6257-7742">RC-2352-6362-6257-7742<a/></td>
-        <td data-label="Case">DE0DE9F</td>
-        <td data-label="Your reference">Divorce 7</td>
+        <td data-label="Case">1542-5226-7383-2772</td>
+        <td data-label="Your reference">J Hart vs M Hart</td>
         <td data-label="Approver">James</td>
         <td data-label="Status">Pending</td>
         <td id="pendingPayment" data-label="Date"></td>
@@ -177,8 +177,8 @@
 
       <tr>
         <td data-label="Payment reference"><a href="/RC-9584-2521-7742-1457">RC-9584-2521-7742-1457<a/></td>
-        <td data-label="Case">BR024GH</td>
-        <td data-label="Your reference">Probate 33</td>
+        <td data-label="Case">1526-8943-7271-8327</td>
+        <td data-label="Your reference">Smith probate app</td>
         <td data-label="Approver">Lucy</td>
         <td data-label="Status">Completed</td>
         <td id="1457Date" data-label="Date"></td>
@@ -187,12 +187,12 @@
 
       <tr>
         <td data-label="Payment reference"><a href="/dummy">RC-6124-1415-7215-1515<a/></td>
-        <td data-label="Case">FR03VW2</td>
-        <td data-label="Your reference">Divorce 6</td>
+        <td data-label="Case">1562-1578-3622-1589</td>
+        <td data-label="Your reference">Jones hearing</td>
         <td data-label="Approver">Joe</td>
         <td data-label="Status">Completed</td>
         <td id="1515Date" data-label="Date"></td>
-        <td data-label="Amount">-£550.00</td>
+        <td data-label="Amount">-£250.00</td>
       </tr>
 
       <tr class="linked-payment">
@@ -206,9 +206,9 @@
       </tr>
 
       <tr>
-        <td data-label="Payment reference"><a href="/dummy">RC-64220-7212-7321-8721<a/></td>
-        <td data-label="Case">DE024JD</td>
-        <td data-label="Your reference">Probate 32</td>
+        <td data-label="Payment reference"><a href="/dummy">RC-6420-7212-7321-8721<a/></td>
+        <td data-label="Case">1538-3893-8483-8337</td>
+        <td data-label="Your reference">Baker PRB </td>
         <td data-label="Approver">Joe</td>
         <td data-label="Status">Completed</td>
         <td id="8721Date" data-label="Date"></td>
@@ -217,7 +217,7 @@
 
       <tr>
         <td data-label="Payment reference"><a href="/dummy">RC-2234-2626-6772-1678<a/></td>
-        <td data-label="Case">FG083FG</td>
+        <td data-label="Case">1574-2379-9760-0643</td>
         <td data-label="Your reference">Probate 31</td>
         <td data-label="Approver">James</td>
         <td data-label="Status">Completed</td>
@@ -227,18 +227,18 @@
 
       <tr>
         <td data-label="Payment reference"><a href="/dummy">RC-3467-6167-1676-7832<a/></td>
-        <td data-label="Case">DEF2593</td>
-        <td data-label="Your reference">Probate 30</td>
+        <td data-label="Case">1562-1578-3622-1589</td>
+        <td data-label="Your reference">Jones application</td>
         <td data-label="Approver">James</td>
         <td data-label="Status">Completed</td>
         <td id="7832Date" data-label="Date"></td>
-        <td data-label="Amount">-£215.00</td>
+        <td data-label="Amount">-£150.00</td>
       </tr>
 
       <tr>
         <td data-label="Payment reference"><a href="/dummy">RC-7436-2522-7632-8363<a/></td>
-        <td data-label="Case">BR023FD</td>
-        <td data-label="Your reference">Divorce 5</td>
+        <td data-label="Case">1508-4872-2683-8278</td>
+        <td data-label="Your reference">Greens divorce</td>
         <td data-label="Approver">Lucy</td>
         <td data-label="Status">Completed</td>
         <td id="8363Date" data-label="Date"></td>
@@ -253,7 +253,8 @@
 
 
 
-
+      </div>
+        </div>
 
         </div>
 
@@ -345,7 +346,7 @@ function myFunction() {
 
   // Loop through all table rows, and hide those who don't match the search query
   for (i = 0; i < tr.length; i++) {
-    td = tr[i].getElementsByTagName("td")[2];
+    td = tr[i].getElementsByTagName("td")[1];
     if (td) {
       if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
         tr[i].style.display = "";
@@ -360,35 +361,35 @@ function myFunction() {
 
   function balanceYesterday() {
     var dateField = document.getElementById('balanceYesterday');
-    dateField.innerHTML = moment().subtract(1, 'days').format ('[As of ]DD MMM YYYY');
+    dateField.innerHTML = moment().subtract(1, 'days').format ('[ ]DD MMM YYYY');
   }
 
   paymentReferenceDates();
 
   function paymentReferenceDates() {
     var dateField = document.getElementById('pendingPayment');
-    dateField.innerHTML = moment().format('DD MMM YYYY');
+    dateField.innerHTML = moment().format('DD MMM YYYY[—23:00:00]');
 
     var dateField = document.getElementById('1457Date');
-    dateField.innerHTML = moment().subtract(1, 'days').format ('DD MMM YYYY');
+    dateField.innerHTML = moment().subtract(1, 'days').format ('DD MMM YYYY[—12:31:27]');
 
     var dateField = document.getElementById('1515Date');
-    dateField.innerHTML = moment().subtract(2, 'days').format ('DD MMM YYYY');
+    dateField.innerHTML = moment().subtract(2, 'days').format ('DD MMM YYYY[—09:11:12]');
 
     var dateField = document.getElementById('8721Date');
-    dateField.innerHTML = moment().subtract(3, 'days').format ('DD MMM YYYY');
+    dateField.innerHTML = moment().subtract(3, 'days').format ('DD MMM YYYY[—16:01:45]');
 
     var dateField = document.getElementById('directDebitDate');
-    dateField.innerHTML = moment().subtract(3, 'days').format ('DD MMM YYYY');
+    dateField.innerHTML = moment().subtract(3, 'days').format ('DD MMM YYYY[—00:00:02]');
 
     var dateField = document.getElementById('1678Date');
-    dateField.innerHTML = moment().subtract(4, 'days').format ('DD MMM YYYY');
+    dateField.innerHTML = moment().subtract(4, 'days').format ('DD MMM YYYY[—11:43:33]');
 
     var dateField = document.getElementById('7832Date');
-    dateField.innerHTML = moment().subtract(4, 'days').format ('DD MMM YYYY');
+    dateField.innerHTML = moment().subtract(4, 'days').format ('DD MMM YYYY[—15:23:56]');
 
     var dateField = document.getElementById('8363Date');
-    dateField.innerHTML = moment().subtract(5, 'days').format ('DD MMM YYYY');
+    dateField.innerHTML = moment().subtract(5, 'days').format ('DD MMM YYYY[—10:20:05]');
   }
 
 
