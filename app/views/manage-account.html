@@ -122,7 +122,7 @@
               <dt class="govuk-check-your-answers__question">
             Next payment due
               </dt>
-              <dd class="govuk-check-your-answers__answer">
+              <dd class="govuk-check-your-answers__answer" id="nextPaymentDue">
                 01 Aug 2018
               </dd>
               <dd class="govuk-check-your-answers__change">
@@ -230,5 +230,19 @@
   </div>
 
 
+
+{% endblock %}
+{% block page_scripts %}
+<script>
+
+
+nextPaymentDue();
+
+function nextPaymentDue() {
+  var dateField = document.getElementById('nextPaymentDue');
+  dateField.innerHTML = moment().add(1, 'months').format ('01 MMM YYYY');
+}
+
+</script>
 
 {% endblock %}

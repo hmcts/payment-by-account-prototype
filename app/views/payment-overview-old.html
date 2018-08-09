@@ -21,7 +21,6 @@
               <div class="govuk-grid-row">
                 <div class="govuk-grid-column-payment-one-quarter">
 
-
                   <h2 class="govuk-heading-l">Account</h2>
 
                   <span class="govuk-caption-m">£20,000.00 limit</span>
@@ -34,19 +33,17 @@
                      <h3 class="govuk-heading-m">£2746.00 <span class="govuk-caption-m" style="color: #000;"> As of<span id="balanceYesterday"></span></span>
                      </h3>
 
-
-                   <span class="govuk-caption-m">Outstanding balance</span>
-                   <h3 class="govuk-heading-m">£17,254.00<span class="govuk-caption-m" style="color: #000; padding-bottom: 10px;"> Next payment due <br> <span id="nextPaymentDue"></span></span>
-                     <a href="make-payment" role="button" class="govuk-button">
-                     Make a payment
-                   </a>
-                     <!-- <a class="govuk-link--no-visited-state govuk-!-font-size-19 govuk-!-font-weight-bold" href="/make-payment">Make a payment</a> -->
-                   </h3>
+                <!-- <h3 class="govuk-heading-l govuk-!-font-weight-regular"><a class="govuk-link govuk-!-font-size-19" href="/statements">Statement summary</a><br>
+                  <p class="govuk-body govuk-!-font-size-19 govuk-!-font-weight-bold">£17,254.00<span class="govuk-caption-m">Next payment due <br>4 Aug 2018</span></p>
+                  <button type="submit" class="govuk-button">
+                  Make payment
+                </button>
+              </h3> -->
 
 
+                <br>
 
-
-                <ul class="govuk-list govuk-link--no-visited-state">
+                <ul class="govuk-list">
                 <li>
 
                   <a class="govuk-link--no-visited-state govuk-!-font-size-19 govuk-!-font-weight-bold" href="/statements">View statements</a>
@@ -55,8 +52,12 @@
                   <a class="govuk-link govuk-link--no-visited-state govuk-!-font-size-19 govuk-!-font-weight-bold" href="/manage-account">Manage account</a>
                 </li>
                 <li>
+                  <a class="govuk-link govuk-link--no-visited-state govuk-!-font-size-19 govuk-!-font-weight-bold" href="/make-payment">Make a payment</a>
+                </li>
+                <li>
                   <a class="govuk-link govuk-link--no-visited-state govuk-!-font-size-19 govuk-!-font-weight-bold" href="#">Add an account</a>
                 </li>
+
               </ul>
 
               <br>
@@ -127,7 +128,7 @@
         <th class="govuk-table__header" scope="col">Payment reference</th>
         <th class="govuk-table__header" scope="col">Case</th>
         <th class="govuk-table__header" scope="col">Reference</th>
-        <th class="govuk-table__header" scope="col">Approver</th>
+        <th class="govuk-table__header" scope="col">Legal <br> representative</th>
         <th class="govuk-table__header" scope="col">Status</th>
         <th class="govuk-table__header" scope="col">Date created</th>
         <th class="govuk-table__header" scope="col">Amount</th>
@@ -232,7 +233,7 @@
       <br>
       <br>
       <br>
-        <a class="govuk-link govuk-!-font-size-14" href="/payment-overview">Alternate overview page</a>
+        <a class="govuk-link govuk-!-font-size-14" href="/payment-overview2">Alternate overview page</a>
 
 
 
@@ -332,13 +333,6 @@ function myFunction() {
   function balanceYesterday() {
     var dateField = document.getElementById('balanceYesterday');
     dateField.innerHTML = moment().subtract(1, 'days').format ('[ ]DD MMM YYYY');
-  }
-
-  nextPaymentDue();
-
-  function nextPaymentDue() {
-    var dateField = document.getElementById('nextPaymentDue');
-    dateField.innerHTML = moment().add(1, 'months').format ('01 MMM YYYY');
   }
 
   paymentReferenceDates();
