@@ -22,31 +22,27 @@
                 <div class="govuk-grid-column-payment-one-quarter">
 
 
-                  <h2 class="govuk-heading-l">Account</h2>
-
-                  <span class="govuk-caption-m">£20,000.00 limit</span>
                   <h3 class="govuk-heading-m">PBA0241163<br>
-                   <span class="govuk-caption-m" style="color: #000;">Credit account
-                   </span>
+                   <span class="govuk-caption-m" style="color: #000;"></h3>
+
+                     <span class="govuk-caption-m">Total balance:</span>
+                     <h3 class="govuk-heading-m">£2746.00 <span class="govuk-caption-m" style="color: #000;"></span></span>
                      </h3>
 
-                     <span class="govuk-caption-m">Available balance</span>
-                     <h3 class="govuk-heading-m">£2746.00 <span class="govuk-caption-m" style="color: #000;"> As of<span id="balanceYesterday"></span></span>
-                     </h3>
 
-
-                   <span class="govuk-caption-m">Outstanding balance</span>
-                   <h3 class="govuk-heading-m">£17,254.00<span class="govuk-caption-m" style="color: #000; padding-bottom: 10px;"> Next payment due <br> <span id="nextPaymentDue"></span></span>
+                   <span class="govuk-caption-m">Available credit:</span>
+                   <h3 class="govuk-heading-m">£17,254.00<span class="govuk-caption-m" style="color: #000; padding-bottom: 10px;"><br>Next payment:<br>01 Sep 2018<br> <span id="nextPaymentDue"></span></span>
                      <a href="make-payment" role="button" class="govuk-button">
-                     Make a payment
+                     Pay balance
                    </a>
                      <!-- <a class="govuk-link--no-visited-state govuk-!-font-size-19 govuk-!-font-weight-bold" href="/make-payment">Make a payment</a> -->
                    </h3>
 
 
 
+                <br>
 
-                <ul class="govuk-list govuk-link--no-visited-state">
+                <ul class="govuk-list">
                 <li>
 
                   <a class="govuk-link--no-visited-state govuk-!-font-size-19 govuk-!-font-weight-bold" href="/statements">View statements</a>
@@ -55,8 +51,12 @@
                   <a class="govuk-link govuk-link--no-visited-state govuk-!-font-size-19 govuk-!-font-weight-bold" href="/manage-account">Manage account</a>
                 </li>
                 <li>
+                  <a class="govuk-link govuk-link--no-visited-state govuk-!-font-size-19 govuk-!-font-weight-bold" href="/make-payment">Make a payment</a>
+                </li>
+                <li>
                   <a class="govuk-link govuk-link--no-visited-state govuk-!-font-size-19 govuk-!-font-weight-bold" href="#">Add an account</a>
                 </li>
+
               </ul>
 
               <br>
@@ -127,7 +127,7 @@
         <th class="govuk-table__header" scope="col">Payment reference</th>
         <th class="govuk-table__header" scope="col">Case</th>
         <th class="govuk-table__header" scope="col">Reference</th>
-        <th class="govuk-table__header" scope="col">Legal <br> contact</th>
+        <th class="govuk-table__header" scope="col">Submitted by</th>
         <th class="govuk-table__header" scope="col">Status</th>
         <th class="govuk-table__header" scope="col">Date created</th>
         <th class="govuk-table__header" scope="col">Amount</th>
@@ -139,7 +139,7 @@
         <td data-label="Payment reference"><a href="/RC-2352-6362-6257-7742">RC-2352-6362-6257-7742<a/></td>
         <td data-label="Case">1542-5226-7383-2772</td>
         <td data-label="Your reference">J Hart vs M Hart</td>
-        <td data-label="Approver">James Brown</td>
+        <td data-label="Approver">James</td>
         <td data-label="Status">Pending</td>
         <td id="pendingPayment" data-label="Date"></td>
         <td data-label="Amount">-£550.00</td>
@@ -149,7 +149,7 @@
         <td data-label="Payment reference"><a href="/RC-9584-2521-7742-1457">RC-9584-2521-7742-1457<a/></td>
         <td data-label="Case">1526-8943-7271-8327</td>
         <td data-label="Your reference">Smith probate app</td>
-        <td data-label="Approver">Lucy Smith</td>
+        <td data-label="Approver">Lucy</td>
         <td data-label="Status">Completed</td>
         <td id="1457Date" data-label="Date"></td>
         <td data-label="Amount">-£215.00</td>
@@ -159,7 +159,7 @@
         <td data-label="Payment reference"><a href="#">RC-6124-1415-7215-1515<a/></td>
         <td data-label="Case">1562-1578-3622-1589</td>
         <td data-label="Your reference">Jones hearing</td>
-        <td data-label="Approver">Joe Green</td>
+        <td data-label="Approver">Joe</td>
         <td data-label="Status">Completed</td>
         <td id="1515Date" data-label="Date"></td>
         <td data-label="Amount">-£250.00</td>
@@ -179,7 +179,7 @@
         <td data-label="Payment reference"><a href="#">RC-6420-7212-7321-8721<a/></td>
         <td data-label="Case">1538-3893-8483-8337</td>
         <td data-label="Your reference">Baker PRB </td>
-        <td data-label="Approver">Joe Green</td>
+        <td data-label="Approver">Joe</td>
         <td data-label="Status">Completed</td>
         <td id="8721Date" data-label="Date"></td>
         <td data-label="Amount">-£215.00</td>
@@ -189,7 +189,7 @@
         <td data-label="Payment reference"><a href="#">RC-2234-2626-6772-1678<a/></td>
         <td data-label="Case">1574-2379-9760-0643</td>
         <td data-label="Your reference">Probate 31</td>
-        <td data-label="Approver">James Brown</td>
+        <td data-label="Approver">James</td>
         <td data-label="Status">Completed</td>
         <td id="1678Date" data-label="Date"></td>
         <td data-label="Amount">-£215.00</td>
@@ -199,7 +199,7 @@
         <td data-label="Payment reference"><a href="#">RC-3467-6167-1676-7832<a/></td>
         <td data-label="Case">1562-1578-3622-1589</td>
         <td data-label="Your reference">Jones application</td>
-        <td data-label="Approver">James Brown</td>
+        <td data-label="Approver">James</td>
         <td data-label="Status">Completed</td>
         <td id="7832Date" data-label="Date"></td>
         <td data-label="Amount">-£150.00</td>
@@ -209,7 +209,7 @@
         <td data-label="Payment reference"><a href="#">RC-7436-2522-7632-8363<a/></td>
         <td data-label="Case">1508-4872-2683-8278</td>
         <td data-label="Your reference">Greens divorce</td>
-        <td data-label="Approver">Lucy Smith</td>
+        <td data-label="Approver">Lucy</td>
         <td data-label="Status">Completed</td>
         <td id="8363Date" data-label="Date"></td>
         <td data-label="Amount">-£550.00</td>
@@ -229,7 +229,10 @@
         </div>
 
       </div>
-
+      <br>
+      <br>
+      <br>
+        <a class="govuk-link govuk-!-font-size-14" href="/payment-overview2">Alternate overview page</a>
 
 
 
@@ -259,7 +262,7 @@
 
 {% endblock %}
 {% block page_scripts %}
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
 <script>
 
 $(function() {
@@ -329,13 +332,6 @@ function myFunction() {
   function balanceYesterday() {
     var dateField = document.getElementById('balanceYesterday');
     dateField.innerHTML = moment().subtract(1, 'days').format ('[ ]DD MMM YYYY');
-  }
-
-  nextPaymentDue();
-
-  function nextPaymentDue() {
-    var dateField = document.getElementById('nextPaymentDue');
-    dateField.innerHTML = moment().add(1, 'months').format ('01 MMM YYYY');
   }
 
   paymentReferenceDates();
