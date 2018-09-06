@@ -38,7 +38,7 @@
               Email address
             </label>
             <span id="email-hint" class="govuk-hint">
-              User should be someone from your organisation
+              Should be someone from your organisation
             </span>
             <input class="govuk-input" id="email" name="email" type="text" aria-describedby="email-hint">
           </div>
@@ -49,34 +49,40 @@
             <fieldset class="govuk-fieldset">
               <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
                 <h1 class="govuk-fieldset__heading">
-                  Select permission
+                  Select permission level
                 </h1>
               </legend>
               <div class="govuk-radios">
                 <div class="govuk-radios__item">
                   <input class="govuk-radios__input" id="where-do-you-live-1" name="where-do-you-live" type="radio" value="england">
                   <label class="govuk-label govuk-radios__label" for="where-do-you-live-1">
-                  Read only
+                  <strong>Administration</strong>
                   <span id="email-hint" class="govuk-hint">
-                    Can view everything
+                    View transactions <br>
+                    Make payments <br>
+                    Manage settings
                   </span>
                 </label>
                 </div>
                 <div class="govuk-radios__item">
                   <input class="govuk-radios__input" id="where-do-you-live-2" name="where-do-you-live" type="radio" value="scotland">
                   <label class="govuk-label govuk-radios__label" for="where-do-you-live-2">
-                  Write
+                  <strong>View and pay</strong>
                   <span id="email-hint" class="govuk-hint">
-                    Inherits read only permissions and can make payments
+                    View transactions <br>
+                    Make payments <br>
+                    Cannot manage settings
                   </span>
                 </label>
                 </div>
                 <div class="govuk-radios__item">
                   <input class="govuk-radios__input" id="where-do-you-live-3" name="where-do-you-live" type="radio" value="wales">
                   <label class="govuk-label govuk-radios__label" for="where-do-you-live-3">
-                  Admin
+                  <strong>View only</strong>
                   <span id="email-hint" class="govuk-hint">
-                    Inherits read only, write permissions and can change account details, add users
+                    View transactions <br>
+                    Cannot make payments <br>
+                    Cannot manage settings
                   </span>
                 </label>
                 </div>
@@ -84,14 +90,14 @@
             </fieldset>
           </div>
 
-          <div class="govuk-inset-text">
+          <!-- <div class="govuk-inset-text">
             It can take up to 3 working days to add a user.
-          </div>
+          </div> -->
 
           <br>
 
           <a href="/manage-account" role="button" class="govuk-button">
-            Submit
+            Send invitation email
           </a>
 
           <br>

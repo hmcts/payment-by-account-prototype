@@ -22,43 +22,26 @@
                 <div class="govuk-grid-column-payment-one-quarter">
 
 
-                  <!-- <h2 class="govuk-heading-l">Account</h2> -->
+                  <h2 class="govuk-heading-l">Account</h2>
 
-                  <!-- <span class="govuk-caption-m"></span>
+                  <span class="govuk-caption-m">£20,000.00 limit</span>
                   <h3 class="govuk-heading-m">PBA0241163<br>
-                   <span class="govuk-caption-m" style="color: #000;">
+                   <span class="govuk-caption-m" style="color: #000;">Credit account
                    </span>
-                     </h3> -->
+                     </h3>
 
-                         <div class="govuk-form-group">
-                          <label class="govuk-label" for="sort">
-                            Select account
-                          </label>
-                          <select class="govuk-select govuk-!-width-three-quarters" id="sort" name="sort">
-                            <option value="published" selected>PBA0241163</option>
-                            <option value="updated">PBA367262</option>
-
-                          </select>
-                        </div>
-
-                     <span class="govuk-caption-m">Total balance</span>
-                     <h3 class="govuk-heading-m">£2746.00
-                        <!-- <span class="govuk-caption-m" style="color: #000;"> As of<span id="balanceYesterday"></span></span> -->
+                     <span class="govuk-caption-m">Available balance</span>
+                     <h3 class="govuk-heading-m">£2746.00 <span class="govuk-caption-m" style="color: #000;"> As of<span id="balanceYesterday"></span></span>
                      </h3>
 
 
-                   <span class="govuk-caption-m">Available credit</span>
-                   <h3 class="govuk-heading-m">£17,254.00
+                   <span class="govuk-caption-m">Outstanding balance</span>
+                   <h3 class="govuk-heading-m">£17,254.00<span class="govuk-caption-m" style="color: #000; padding-bottom: 10px;"> Next payment due <br> <span id="nextPaymentDue"></span></span>
+                     <a href="make-payment" role="button" class="govuk-button">
+                     Make a payment
+                   </a>
                      <!-- <a class="govuk-link--no-visited-state govuk-!-font-size-19 govuk-!-font-weight-bold" href="/make-payment">Make a payment</a> -->
-                     <span class="govuk-caption-m" style="color: #000; padding-bottom: 10px;"> Next payment due <br> <span id="nextPaymentDue"></span></span>
                    </h3>
-                   <div>
-                   <div href="make-payment" role="button" class="govuk-button">
-                   Pay balance
-
-                 </div>
-
-               </div>
 
 
 
@@ -82,7 +65,7 @@
 
         <div class="govuk-grid-column-three-quarters">
 
-          <!-- <h2 class="govuk-heading-l">Transactions</h2> -->
+          <h2 class="govuk-heading-l">Transactions</h2>
 
           <div class="govuk-grid-row">
 
@@ -341,6 +324,12 @@ function myFunction() {
   }
 }
 
+  balanceYesterday();
+
+  function balanceYesterday() {
+    var dateField = document.getElementById('balanceYesterday');
+    dateField.innerHTML = moment().subtract(1, 'days').format ('[ ]DD MMM YYYY');
+  }
 
   nextPaymentDue();
 
@@ -375,13 +364,6 @@ function myFunction() {
 
     var dateField = document.getElementById('8363Date');
     dateField.innerHTML = moment().subtract(5, 'days').format ('DD MMM YYYY[—10:20:05]');
-  }
-
-  balanceYesterday();
-
-  function balanceYesterday() {
-    var dateField = document.getElementById('balanceYesterday');
-    dateField.innerHTML = moment().subtract(1, 'days').format ('[ ]DD MMM YYYY');
   }
 
 
