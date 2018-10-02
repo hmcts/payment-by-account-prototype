@@ -44,13 +44,13 @@
           <ul class="hmcts-sub-navigation__list">
 
           <li class="hmcts-sub-navigation__item">
-            <a class="hmcts-sub-navigation__link" aria-current="page" href="/payment-overview-v2">
+            <a class="hmcts-sub-navigation__link"  href="/payment-overview-v2">
               Overview
             </a>
           </li>
 
           <li class="hmcts-sub-navigation__item">
-            <a class="hmcts-sub-navigation__link" href="/transactions">
+            <a class="hmcts-sub-navigation__link" aria-current="page" href="/transactions">
               Transactions
             </a>
           </li>
@@ -73,62 +73,19 @@
 
 
           <h1 class="govuk-body govuk-!-font-size-48 govuk-!-font-weight-bold">
-            <span class="govuk-caption-xl">Payments</span> Overview
+            <span class="govuk-caption-xl">Payments</span> Transactions
 
         </div>
       </div>
 
               <div class="govuk-grid-row">
-                <div class="govuk-grid-column-payment-one-quarter">
 
 
 
 
-                         <div class="govuk-form-group">
-                          <label class="govuk-label" for="sort">
-                            Select account
-                          </label>
-                          <select class="govuk-select govuk-!-width-three-quarters" id="sort" name="sort">
-                            <option value="published" selected>PBA0241163</option>
-                            <option value="updated">PBA367262</option>
+        <div class="govuk-grid-column-three-quarters">
 
-                          </select>
-                        </div>
-
-
-
-
-
-
-
-              <br>
-
-        </div>
-
-        <div class="govuk-grid-column-payment-one-quarter">
-          <span class="govuk-caption-m">Total balance</span>
-          <h3 class="govuk-heading-m">£2746.00
-             <!-- <span class="govuk-caption-m" style="color: #000;"> As of<span id="balanceYesterday"></span></span> -->
-          </h3>
-            </div>
-
-            <div class="govuk-grid-column-payment-one-quarter">
-
-                                 <span class="govuk-caption-m">Available credit</span>
-                                 <h3 class="govuk-heading-m">£17,254.00
-                                   <!-- <a class="govuk-link--no-visited-state govuk-!-font-size-19 govuk-!-font-weight-bold" href="/make-payment">Make a payment</a> -->
-                                   <span class="govuk-caption-m" style="color: #000; padding-bottom: 10px;"> Next payment due <br> <span id="nextPaymentDue"></span></span>
-                                 </h3>
-                                 <div>
-                                 <a href="/make-payment-v2" role="button" class="govuk-button">
-                                 Pay balance
-
-                               </a>
-                </div>
-
-        <!-- <div class="govuk-grid-column-three-quarters">
-
-
+          <!-- <h2 class="govuk-heading-l">Transactions</h2> -->
 
           <div class="govuk-grid-row">
 
@@ -161,6 +118,11 @@
                   </div>
 
 
+                  <!-- <form class="example" action="action_page.php">
+                    <input class="govuk-input" type="text" placeholder="Enter a case number or reference" name="search">
+                    <button type="submit"><i class="fa fa-search"></i></button>
+                  </form> -->
+
               </form>
             </div>
 
@@ -179,7 +141,7 @@
 
 
           <table class="govuk-body govuk-!-font-size-14" id="transactionstable">
-          <p class="govuk-body govuk-!-font-size-16"> </p>
+          <p class="govuk-body govuk-!-font-size-16">  <!-- 7 payments --> </p>
           <thead class="govuk-!-font-size-16">
       <tr class="govuk-table__row">
         <th class="govuk-table__header" scope="col">Payment reference</th>
@@ -284,7 +246,36 @@
       </div>
         </div>
 
-        </div> -->
+        </div>
+
+        <div class="govuk-grid-column-payment-one-quarter">
+
+
+<br>
+<br>
+
+                 <div class="govuk-form-group">
+
+                  <ul class="govuk-list govuk-link--no-visited-state">
+                  <li>
+
+                    <a class="govuk-link--no-visited-state govuk-!-font-size-19 govuk-!-font-weight-bold" href="/statements-v2">View statements</a>
+                  </li>
+
+                </ul>
+                </div>
+
+
+
+
+
+
+
+      <br>
+
+</div>
+
+
 
       </div>
 
