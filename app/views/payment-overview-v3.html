@@ -24,7 +24,7 @@
   </li>
 
   <li class="hmcts-primary-navigation__item">
-    <a class="hmcts-primary-navigation__link" aria-current="page" href="/payment-overview-v2">
+    <a class="hmcts-primary-navigation__link" aria-current="page" href="#">
       Payments
     </a>
   </li>
@@ -37,26 +37,53 @@
 
 
   <div class="jui-width-container">
+    <div class="govuk-grid-column-payment-one-quarter">
+
+
+  </div>
+
+
+
+
 
           <nav class="hmcts-sub-navigation" aria-label="Sub navigation">
               <div class="jui-width-container">
 
+
+
+
+
           <ul class="hmcts-sub-navigation__list">
 
+            <li class="hmcts-sub-navigation__item">
+                Account
+            </li>
+
+            <li class="hmcts-sub-navigation__item">
+              <div>
+
+               <select class="govuk-select " id="sort" name="sort">
+                 <option value="published" selected>PBA0241163</option>
+                 <option value="updated">PBA367262</option>
+
+               </select>
+              </div>
+            </li>
+
           <li class="hmcts-sub-navigation__item">
-            <a class="hmcts-sub-navigation__link"  href="/payment-overview-v2">
+            <a class="hmcts-sub-navigation__link" aria-current="page" href="#">
               Overview
             </a>
           </li>
 
           <li class="hmcts-sub-navigation__item">
-            <a class="hmcts-sub-navigation__link" aria-current="page" href="/transactions">
+            <a class="hmcts-sub-navigation__link" href=#>
               Transactions
             </a>
           </li>
 
           <li class="hmcts-sub-navigation__item">
-            <a class="hmcts-sub-navigation__link" href="/manage-account-v2">
+            <a class="hmcts-sub-navigation__link" href="#">
               Manage account
             </a>
           </li>
@@ -73,7 +100,7 @@
 
 
           <h1 class="govuk-body govuk-!-font-size-48 govuk-!-font-weight-bold">
-            <span class="govuk-caption-xl"></span> Transactions
+            <span class="govuk-caption-xl"></span> Overview
 
         </div>
       </div>
@@ -81,11 +108,31 @@
               <div class="govuk-grid-row">
 
 
+        <div class="govuk-grid-column-payment-one-quarter">
+          <span class="govuk-caption-m">Total balance</span>
+          <h3 class="govuk-heading-m">£2746.00
+             <!-- <span class="govuk-caption-m" style="color: #000;"> As of<span id="balanceYesterday"></span></span> -->
+          </h3>
+          <span class="govuk-caption-m">Available credit</span>
+          <h3 class="govuk-heading-m">£17,254.00
+            <!-- <a class="govuk-link--no-visited-state govuk-!-font-size-19 govuk-!-font-weight-bold" href="/make-payment">Make a payment</a> -->
+            <span class="govuk-caption-m" style="color: #000; padding-bottom: 10px;"> Next payment due <br> <span id="nextPaymentDue"></span></span>
+          </h3>
+          <div>
+          <a href="/make-payment-v2" role="button" class="govuk-button">
+          Pay balance
+
+        </a>
+            </div>
+
+            <div class="govuk-grid-column-payment-one-quarter">
 
 
-        <div class="govuk-grid-column-three-quarters">
+                </div>
 
-          <!-- <h2 class="govuk-heading-l">Transactions</h2> -->
+        <!-- <div class="govuk-grid-column-three-quarters">
+
+
 
           <div class="govuk-grid-row">
 
@@ -118,11 +165,6 @@
                   </div>
 
 
-                  <!-- <form class="example" action="action_page.php">
-                    <input class="govuk-input" type="text" placeholder="Enter a case number or reference" name="search">
-                    <button type="submit"><i class="fa fa-search"></i></button>
-                  </form> -->
-
               </form>
             </div>
 
@@ -141,7 +183,7 @@
 
 
           <table class="govuk-body govuk-!-font-size-14" id="transactionstable">
-          <p class="govuk-body govuk-!-font-size-16">  <!-- 7 payments --> </p>
+          <p class="govuk-body govuk-!-font-size-16"> </p>
           <thead class="govuk-!-font-size-16">
       <tr class="govuk-table__row">
         <th class="govuk-table__header" scope="col">Payment reference</th>
@@ -246,36 +288,7 @@
       </div>
         </div>
 
-        </div>
-
-        <div class="govuk-grid-column-payment-one-quarter">
-
-
-<br>
-<br>
-
-                 <div class="govuk-form-group">
-
-                  <ul class="govuk-list govuk-link--no-visited-state">
-                  <li>
-
-                    <a class="govuk-link--no-visited-state govuk-!-font-size-19 govuk-!-font-weight-bold" href="/statements-v2">View statements</a>
-                  </li>
-
-                </ul>
-                </div>
-
-
-
-
-
-
-
-      <br>
-
-</div>
-
-
+        </div> -->
 
       </div>
 
