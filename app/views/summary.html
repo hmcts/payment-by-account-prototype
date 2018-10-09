@@ -1,0 +1,271 @@
+{% extends "layouts/admin/base.html" %}
+
+{% block pageTitle %}
+  PBA0241163 | Summary
+{% endblock %}
+
+{% block content %}
+<nav class="hmcts-primary-navigation" aria-label="Primary navigation">
+
+<div class="hmcts-header__container">
+
+<ul class="hmcts-primary-navigation__list">
+
+  <li class="hmcts-primary-navigation__item">
+    <a class="hmcts-primary-navigation__link" href="/profile">
+      Profile
+    </a>
+  </li>
+
+  <li class="hmcts-primary-navigation__item">
+    <a class="hmcts-primary-navigation__link" href="/organisation">
+      Organisation
+    </a>
+  </li>
+
+  <li class="hmcts-primary-navigation__item">
+    <a class="hmcts-primary-navigation__link" href="/users">
+      Users
+    </a>
+  </li>
+
+  <li class="hmcts-primary-navigation__item">
+    <a class="hmcts-primary-navigation__link" href="/payments">
+      Payments
+    </a>
+  </li>
+
+</ul>
+
+</div>
+
+</nav>
+
+<div class="govuk-width-container">
+
+<main role="main" class="govuk-main-wrapper">
+
+  <nav class="hmcts-sub-navigation">
+
+<ul class="hmcts-sub-navigation__list">
+
+
+    <li class="hmcts-sub-navigation__item">
+      <a class="hmcts-sub-navigation__link" aria-current="page" href="/summary">
+        Summary
+      </a>
+    </li>
+
+    <li class="hmcts-sub-navigation__item">
+      <a class="hmcts-sub-navigation__link" href="/transactions">
+        Transactions
+      </a>
+    </li>
+
+    <li class="hmcts-sub-navigation__item">
+      <a class="hmcts-sub-navigation__link" href="/statements">
+        Statements
+      </a>
+    </li>
+
+
+</ul>
+
+</nav>
+
+  <div class="hmcts-page-heading">
+    <div class="hmcts-page-heading__title-wrapper">
+
+      <h1 class="govuk-body govuk-!-font-size-48 govuk-!-font-weight-bold">
+            <span class="govuk-caption-xl">PBA0241163</span> Summary
+            </h1>
+    </div>
+    <div class="hmcts-page-heading__actions-wrapper">
+
+    </div>
+  </div>
+
+
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <dl class="govuk-check-your-answers govuk-check-your-answers--pba-overview">
+
+            <div class="govuk-check-your-answers__contents">
+              <dt class="govuk-check-your-answers__question">
+                Balance
+              </dt>
+              <dd class="govuk-check-your-answers__answer">
+                £2746.00
+              </dd>
+              <dd class="govuk-check-your-answers__change">
+              </dd>
+            </div>
+            <div class="govuk-check-your-answers__contents">
+              <dt class="govuk-check-your-answers__question">
+                Available credit
+              </dt>
+              <dd class="govuk-check-your-answers__answer">
+                £17,254.00
+              </dd>
+              <dd class="govuk-check-your-answers__change">
+  <span>Next payment due<br><span id="nextPaymentDue">01 N18</span></span>
+              </dd>
+
+
+            </div>
+          </dl>
+
+          <span id="pay-balance-hint" class="govuk-hint">
+            Make a payment towards your balance.
+          </span>
+
+          <button type="submit" class="govuk-button">
+          Pay balance
+          </button>
+
+          <br>
+          <br>
+          <br>
+
+          <h2 class="govuk-heading-l">Account details</h2>
+
+          <dl class="govuk-check-your-answers govuk-check-your-answers--pba-overview">
+            <div class="govuk-check-your-answers__contents">
+              <dt class="govuk-check-your-answers__question">
+                Account number
+              </dt>
+              <dd class="govuk-check-your-answers__answer">
+                  PBA0241163
+              </dd>
+              <dd class="govuk-check-your-answers__change">
+              </dd>
+            </div>
+            <div class="govuk-check-your-answers__contents">
+              <dt class="govuk-check-your-answers__question">
+                Account name
+              </dt>
+              <dd class="govuk-check-your-answers__answer">
+                Bluebird solicitors
+              </dd>
+              <dd class="govuk-check-your-answers__change">
+                <a href="#">
+                  Change<span class="visually-hidden"></span>
+                </a>
+              </dd>
+            </div>
+
+            <div class="govuk-check-your-answers__contents">
+              <dt class="govuk-check-your-answers__question">
+                Account type
+              </dt>
+              <dd class="govuk-check-your-answers__answer">
+                Credit
+              </dd>
+              <dd class="govuk-check-your-answers__change">
+                <a href="#">
+                  Change<span class="visually-hidden"></span>
+                </a>
+              </dd>
+            </div>
+
+            <div class="govuk-check-your-answers__contents">
+              <dt class="govuk-check-your-answers__question">
+                Credit limit
+              </dt>
+              <dd class="govuk-check-your-answers__answer">
+                £20,000.00
+              </dd>
+              <dd class="govuk-check-your-answers__change">
+                <a href="#">
+                  Change<span class="visually-hidden"></span>
+                </a>
+              </dd>
+            </div>
+
+            <div class="govuk-check-your-answers__contents">
+              <dt class="govuk-check-your-answers__question">
+                Billing address
+              </dt>
+              <dd class="govuk-check-your-answers__answer">
+                72 Guild Street<br>
+                London<br>
+                SE23 6FH
+              </dd>
+              <dd class="govuk-check-your-answers__change">
+                <a href="#">
+                  Change<span class="visually-hidden"></span>
+                </a>
+              </dd>
+            </div>
+
+            <div class="govuk-check-your-answers__contents">
+              <dt class="govuk-check-your-answers__question">
+            Billing type
+              </dt>
+              <dd class="govuk-check-your-answers__answer">
+                Monthly
+              </dd>
+              <dd class="govuk-check-your-answers__change">
+                <a href="#">
+                  Change<span class="visually-hidden"></span>
+                </a>
+              </dd>
+            </div>
+
+            <div class="govuk-check-your-answers__contents">
+              <dt class="govuk-check-your-answers__question">
+            Direct debit payment date
+              </dt>
+              <dd class="govuk-check-your-answers__answer">
+                <span id="directDebitPaymentDue">01 N18</span>
+              </dd>
+              <dd class="govuk-check-your-answers__change">
+                <a href="#">
+                  Change<span class="visually-hidden"></span>
+                </a>
+              </dd>
+            </div>
+
+        </dl>
+
+  </div>
+</div>
+
+
+
+
+
+
+
+</main>
+
+</div>
+
+
+
+{% endblock %}
+{% block page_scripts %}
+
+<script>
+
+
+
+nextPaymentDue();
+
+function nextPaymentDue() {
+
+  var dateField = document.getElementById('nextPaymentDue');
+  dateField.innerHTML = moment().add(1, 'months').format ('01 MMM YYYY');
+
+  var dateField = document.getElementById('directDebitPaymentDue');
+  dateField.innerHTML = moment().add(1, 'months').format ('01 MMM YYYY');
+}
+
+
+
+</script>
+
+{% endblock %}

@@ -1,0 +1,308 @@
+{% extends "layouts/admin/base.html" %}
+
+{% block pageTitle %}
+  Profile
+{% endblock %}
+
+{% block content %}
+<nav class="hmcts-primary-navigation" aria-label="Primary navigation">
+
+<div class="hmcts-header__container">
+
+<ul class="hmcts-primary-navigation__list">
+
+  <li class="hmcts-primary-navigation__item">
+    <a class="hmcts-primary-navigation__link" href="/profile-mvp">
+      Profile
+    </a>
+  </li>
+
+  <li class="hmcts-primary-navigation__item">
+    <a class="hmcts-primary-navigation__link" href="/organisation-mvp">
+      Organisation
+    </a>
+  </li>
+
+  <li class="hmcts-primary-navigation__item">
+    <a class="hmcts-primary-navigation__link" aria-current="page" href="/users-mvp">
+      Users
+    </a>
+  </li>
+
+  <li class="hmcts-primary-navigation__item">
+    <a class="hmcts-primary-navigation__link" href="/summary-mvp">
+      Payments
+    </a>
+  </li>
+
+</ul>
+
+</div>
+
+</nav>
+
+<div class="govuk-width-container">
+
+<main role="main" class="govuk-main-wrapper">
+
+
+
+  <div class="hmcts-page-heading">
+    <div class="hmcts-page-heading__title-wrapper">
+
+      <h1 class="govuk-body govuk-!-font-size-48 govuk-!-font-weight-bold">
+            <span class="govuk-caption-xl"></span> Users
+            </h1>
+    </div>
+    <div class="hmcts-page-heading__actions-wrapper">
+
+    </div>
+  </div>
+
+
+
+
+
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+
+    <a href="/manage-account-v2/users/new" role="button" class="govuk-button hmcts-page-heading__button">
+  Invite users
+</a>
+
+    <table class="govuk-table">
+
+
+  <thead class="govuk-table__head">
+    <tr class="govuk-table__row">
+
+      <th class="govuk-table__header" scope="col">Email address</th>
+
+      <th class="govuk-table__header" scope="col">Manage cases</th>
+
+      <th class="govuk-table__header" scope="col">Manage organisation</th>
+
+      <th class="govuk-table__header" scope="col">Manage users</th>
+
+      <th class="govuk-table__header" scope="col">Manage payment</th>
+
+      <th class="govuk-table__header" scope="col">Status</th>
+
+    </tr>
+  </thead>
+
+  <tbody class="govuk-table__body">
+
+    <tr class="govuk-table__row">
+
+
+      <td class="govuk-table__cell"><a href="">adam@sherwindavis.co.uk</a></td>
+
+
+
+      <td class="govuk-table__cell ">Yes</td>
+
+
+
+      <td class="govuk-table__cell ">Yes</td>
+
+
+
+      <td class="govuk-table__cell ">Yes</td>
+
+
+
+      <td class="govuk-table__cell ">Yes</td>
+
+
+
+      <td class="govuk-table__cell ">Active</td>
+
+
+    </tr>
+
+    <tr class="govuk-table__row">
+
+
+      <td class="govuk-table__cell"><a href="">amysmith@sherwindavis.co.uk</a></td>
+
+
+
+      <td class="govuk-table__cell "></td>
+
+
+
+      <td class="govuk-table__cell ">Yes</td>
+
+
+
+      <td class="govuk-table__cell ">Yes</td>
+
+
+
+      <td class="govuk-table__cell "></td>
+
+
+
+      <td class="govuk-table__cell ">Pending</td>
+
+
+    </tr>
+
+    <tr class="govuk-table__row">
+
+
+      <td class="govuk-table__cell"><a href="">djones@sherwindavis.co.uk</a></td>
+
+
+
+      <td class="govuk-table__cell "></td>
+
+
+
+      <td class="govuk-table__cell ">Yes</td>
+
+
+
+      <td class="govuk-table__cell ">Yes</td>
+
+
+
+      <td class="govuk-table__cell "></td>
+
+
+
+      <td class="govuk-table__cell ">Active</td>
+
+
+    </tr>
+
+    <tr class="govuk-table__row">
+
+
+      <td class="govuk-table__cell"><a href="">spotts@sherwindavis.co.uk</a></td>
+
+
+
+      <td class="govuk-table__cell "></td>
+
+
+
+      <td class="govuk-table__cell "></td>
+
+
+
+      <td class="govuk-table__cell "></td>
+
+
+
+      <td class="govuk-table__cell ">Yes</td>
+
+
+
+      <td class="govuk-table__cell ">Active</td>
+
+
+    </tr>
+
+    <tr class="govuk-table__row">
+
+
+      <td class="govuk-table__cell"><a href="/">kmiles@sherwindavis.co.uk</a></td>
+
+
+
+      <td class="govuk-table__cell ">Yes</td>
+
+
+
+      <td class="govuk-table__cell "></td>
+
+
+
+      <td class="govuk-table__cell "></td>
+
+
+
+      <td class="govuk-table__cell "></td>
+
+
+
+      <td class="govuk-table__cell ">Active</td>
+
+
+    </tr>
+
+  </tbody>
+</table>
+  </div>
+</div>
+
+
+
+
+
+
+
+</main>
+
+</div>
+
+
+
+{% endblock %}
+{% block page_scripts %}
+
+<script>
+
+
+
+pendingStatement();
+
+function pendingStatement() {
+  var dateField = document.getElementById('pendingStatement1');
+  dateField.innerHTML = moment().subtract(0, 'months').format ('02 MMMM YYYY');
+
+  var dateField = document.getElementById('pendingStatement2');
+  dateField.innerHTML = moment().subtract(1, 'months').format ('02 MMMM YYYY');
+
+  var dateField = document.getElementById('pendingStatement3');
+  dateField.innerHTML = moment().subtract(2, 'months').format ('02 MMMM YYYY');
+
+  var dateField = document.getElementById('pendingStatement4');
+  dateField.innerHTML = moment().subtract(3, 'months').format ('02 MMMM YYYY');
+
+  var dateField = document.getElementById('pendingStatement5');
+  dateField.innerHTML = moment().subtract(4, 'months').format ('02 MMMM YYYY');
+
+  var dateField = document.getElementById('pendingStatement6');
+  dateField.innerHTML = moment().subtract(5, 'months').format ('02 MMMM YYYY');
+
+  var dateField = document.getElementById('pendingStatement7');
+  dateField.innerHTML = moment().subtract(6, 'months').format ('02 MMMM YYYY');
+
+  var dateField = document.getElementById('pendingStatement8');
+  dateField.innerHTML = moment().subtract(7, 'months').format ('02 MMMM YYYY');
+
+  var dateField = document.getElementById('pendingStatement9');
+  dateField.innerHTML = moment().subtract(8, 'months').format ('02 MMMM YYYY');
+
+  var dateField = document.getElementById('pendingStatement10');
+  dateField.innerHTML = moment().subtract(9, 'months').format ('02 MMMM YYYY');
+
+  var dateField = document.getElementById('pendingStatement11');
+  dateField.innerHTML = moment().subtract(10, 'months').format ('02 MMMM YYYY');
+
+  var dateField = document.getElementById('pendingStatement12');
+  dateField.innerHTML = moment().subtract(11, 'months').format ('02 MMMM YYYY');
+}
+
+
+
+
+
+</script>
+
+{% endblock %}
